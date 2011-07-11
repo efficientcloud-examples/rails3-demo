@@ -1,3 +1,15 @@
-<h1>Hello, Rails!</h1> <%= link_to "My Blog", posts_path %>
+<h1 style="margin-bottom: 1em">Rails 3 Example</h1>
 
+<big><%= link_to "Go to Example DB Interaction (Blog)", posts_path %></big>
 
+<h2 style="margin-top: 3em">Server Processes</h2>
+<code>
+<%= raw `ps aux`.gsub("\n", "<br/>") %>
+</code>
+
+<h2>Environment</h2>
+<code>
+<% ENV.each do |k,v| %>
+<%= k %>=<%= v%><br/>
+<% end %>
+</code>
