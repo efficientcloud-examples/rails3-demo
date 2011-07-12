@@ -3,13 +3,13 @@
 <big><%= link_to "Go to Example DB Interaction (Blog)", posts_path %></big>
 
 <h2 style="margin-top: 3em">Server Processes</h2>
-<code>
-<%= raw `ps aux`.gsub("\n", "<br/>") %>
-</code>
+<pre>
+<%= raw `ps aux`.gsub("<","&lt;").gsub(">","&gt;") %>
+</pre>
 
 <h2>Environment</h2>
-<code>
+<pre>
 <% ENV.each do |k,v| %>
-<%= k %>=<%= v%><br/>
+<%= k %>=<%= v%>
 <% end %>
-</code>
+</pre>
